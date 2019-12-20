@@ -6,8 +6,6 @@ public class PredstavaDTO {
 	String nazivpred;
 	double prosecan_broj_gledalaca;
 	
-	
-	
 	public PredstavaDTO(int idpred, String nazivpred, double prosecan_broj_gledalaca) {
 		this.idpred = idpred;
 		this.nazivpred = nazivpred;
@@ -35,9 +33,6 @@ public class PredstavaDTO {
 	public String toString() {
 		return String.format("%-6d %-10s %-8f ", idpred, nazivpred, prosecan_broj_gledalaca);
 	}
-	
-	
-	
 	
 
 }

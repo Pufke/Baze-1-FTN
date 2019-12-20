@@ -1,19 +1,19 @@
-package rs.ac.uns.ftn.db.jdbc.exam.ui_handler;
+package rs.ac.uns.ftn.db.jdbc.ui_handler;
 
-public class RadProjUIHandler {
-	// private static final RadProjDAO radprojDAO = new RadProjDAOImpl();
+public class PozoristeUIHandler {
 
-	public void handleRadProjMenu() {
+
+	public void handlePozoristeMenu() {
 		String answer;
 		do {
-			System.out.println("\nOdaberite opciju za rad sa radproj tabelom:");
+			System.out.println("\nOdaberite opciju za rad nad pozoristima:");
 			System.out.println("1 - Prikaz svih");
 			System.out.println("2 - Prikaz po identifikatoru");
-			System.out.println("3 - Unos jednog");
-			System.out.println("4 - Unos vise");
+			System.out.println("3 - Unos jednog pozorista");
+			System.out.println("4 - Unos vise pozorista");
 			System.out.println("5 - Izmena po identifikatoru");
 			System.out.println("6 - Brisanje po identifikatoru");
-			System.out.println("X - Izlazak iz rukovanja radproj tabelom");
+			System.out.println("X - Izlazak iz rukovanja pozoristima");
 
 			answer = MainUIHandler.sc.nextLine();
 
@@ -44,9 +44,11 @@ public class RadProjUIHandler {
 
 	private void showAll() {
 
+
 	}
 
 	private void showById() {
+
 
 	}
 
@@ -63,6 +65,7 @@ public class RadProjUIHandler {
 	}
 
 	private void handleMultipleInserts() {
+	
 
 	}
 
