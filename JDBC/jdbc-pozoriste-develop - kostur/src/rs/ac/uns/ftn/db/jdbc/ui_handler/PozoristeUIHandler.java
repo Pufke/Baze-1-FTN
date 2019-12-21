@@ -1,8 +1,14 @@
 package rs.ac.uns.ftn.db.jdbc.ui_handler;
 
+import java.sql.SQLException;
+
+import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.PozoristeDAO;
+import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.PozoristeDAOImpl;
+import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Pozoriste;
+
 public class PozoristeUIHandler {
-
-
+	
+	private static final PozoristeDAO pozoristeDao = new PozoristeDAOImpl();
 	public void handlePozoristeMenu() {
 		String answer;
 		do {
@@ -43,16 +49,53 @@ public class PozoristeUIHandler {
 	}
 
 	private void showAll() {
+		System.out.println(Pozoriste.getFormattedHeader());
 
-
+		try {
+			for(Pozoriste pozoriste : pozoristeDao.findAll()) {
+				System.out.println(pozoriste);
+			}
+		}catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 	private void showById() {
-
+		System.out.println("IDPOZ: ");
+		int id = Integer.parseInt(MainUIHandler.sc.nextLine());
+		
+		try {
+			Pozoriste pozoriste = pozoristeDao.findById(id);
+			
+			System.out.println(Pozoriste.getFormattedHeader());
+			System.out.println(pozoriste);
+		}catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
 
 	}
 
 	private void handleSingleInsert() {
+		System.out.println("IDPOZ: ");
+		int id = Integer.parseInt(MainUIHandler.sc.nextLine());
+
+		System.out.println("Naziv: ");
+		String naziv = MainUIHandler.sc.nextLine();
+
+		System.out.println("Adresa: ");
+		String adresa = MainUIHandler.sc.nextLine();
+
+		System.out.println("Sajt: ");
+		String sajt = MainUIHandler.sc.nextLine();
+		
+		System.out.println("Mesto: ");
+		String mesto = MainUIHandler.sc.nextLine();
+
+		try {
+			pozoristeDao.save(new Pozoriste(id, naziv, adresa, sajt,mesto));
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
 
 	}
 
