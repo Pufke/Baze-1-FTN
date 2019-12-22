@@ -1,20 +1,22 @@
 package rs.ac.uns.ftn.db.jdbc.pozoriste.service;
 
 import java.sql.SQLException;
-import java.util.HashMap;
+import java.util.List;
 
-import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.PrikazivanjeDAO;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.ScenaDAO;
-import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.CRUDDao;
+
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.PozoristeDAO;
+import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.PredstavaDAO;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.PozoristeDAOImpl;
-import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.PrikazivanjeDAOImpl;
+import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.PredstavaDAOImpl;
+
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.ScenaDAOImpl;
-import rs.ac.uns.ftn.db.jdbc.pozoriste.dto.PrikazivanjeDTO;
+import rs.ac.uns.ftn.db.jdbc.pozoriste.dto.PredstavaDTO;
+
 import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Pozoriste;
-import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Predstava;
-import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Prikazivanje;
+
 import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Scena;
+import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Uloga;
 
 public class ComplexFunctionalityservice {
 
@@ -24,6 +26,7 @@ public class ComplexFunctionalityservice {
 	 */
 	private static final PozoristeDAO pozoristeDAO = new PozoristeDAOImpl();
 	private static final ScenaDAO scenaDAO = new ScenaDAOImpl();
+	private static final PredstavaDAO predstavaDAO = new PredstavaDAOImpl();
 	//Prvi zadatak 
 	public void showSceneForTheatre() {
 		System.out.println(Pozoriste.getFormattedHeader());
@@ -48,7 +51,43 @@ public class ComplexFunctionalityservice {
 		}
 		
 	}
+	//ZADATAK
 	/*
+	 * Prikazati id nazive i prosecan broj gledalaca predstava koje imaju najveci
+	 * prosecan broj gledalaca Za te predstave prikazati listu uloga Pored toga
+	 * prikazati koliko ukupno ima muških uloga i koliko ukupno ima ženskih uloga
+	 */
+	public void prikaziNajveciProsecanBrGledalaca() {
+
+		try {
+			for(PredstavaDTO p : predstavaDAO.najveciProsecanBrGledalaca()) {
+				int muskeUlogeCount = 0;//za svaku predstavu moramo da resetujemo brojace 
+				int zenskeUlogeCount = 0;
+				System.out.println("IDPRED \t NAZIV\t PROSECNO_TRAJANJE");
+				System.out.println(p.toString());
+				//sad treba da odstampamo uloge za tu predstavu 
+				System.out.println("IMEULOGE \t POL \t VRSTAULOGE");
+				List<Uloga> listaUloga = predstavaDAO.listaUlogaZaPredstaveSaNajvecimProsecnimBrGledalaca(p);
+				for(Uloga u: listaUloga) {
+					System.out.println(u.getImeulo() +"\t" + u.isPol() + "\t" + u.getVrstaulo());
+					if(u.isPol().equals("m")) {
+						muskeUlogeCount++;
+					}else { 
+						zenskeUlogeCount++;
+					}
+				}
+				//prikazati koliko ukupno ima muških uloga i koliko ukupno ima ženskih uloga
+				System.out.println("Muskih uloga u ovoj predstavi imamo " + muskeUlogeCount);
+				System.out.println("Zenskih uloga u ovoj predstavi imamo " + zenskeUlogeCount);
+				
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
+	
+	
+	/*	 
 	 * // Drugi zadatak public void showReportingForShowingShows() {
 	 * System.out.println(Predstava.getFormattedHeader()); try { HashMap<Integer,
 	 * PrikazivanjeDTO> reultMap = prikazivanjeDAO.findSumAvgCountForShowingShow();
