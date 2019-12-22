@@ -1,0 +1,12 @@
+package rs.ac.uns.ftn.db.jdbc.pozoriste.dto;
+
+public class PrikazivanjeScenaDTO {
+	
+	int idpred;
+	int suma;
+	
+	public PrikazivanjeScenaDTO(int idpred, int suma) {
+		
+	}
+
+}

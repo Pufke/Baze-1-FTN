@@ -1,0 +1,11 @@
+package rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl;
+
+import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.CRUDDao;
+
+public class ScenDAOImpl implements CRUDDao<T, ID> {
+
+	public ScenDAOImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

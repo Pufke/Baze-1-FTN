@@ -1,0 +1,5 @@
+package rs.ac.uns.ftn.db.jdbc.pozoriste.dto;
+
+public class PredstavaDTO {
+
+}

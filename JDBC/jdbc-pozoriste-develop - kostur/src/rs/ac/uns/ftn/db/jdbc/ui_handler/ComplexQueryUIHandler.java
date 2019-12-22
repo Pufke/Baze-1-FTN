@@ -1,8 +1,10 @@
 package rs.ac.uns.ftn.db.jdbc.ui_handler;
 
+import rs.ac.uns.ftn.db.jdbc.pozoriste.service.ComplexFunctionalityservice;
 
 public class ComplexQueryUIHandler {
 
+private static final ComplexFunctionalityservice complexQueryService = new ComplexFunctionalityservice();
 
 	public void handleComplexQueryMenu() {
 		String answer;
@@ -50,7 +52,7 @@ public class ComplexQueryUIHandler {
 
 			switch (answer) {
 			case "1":
-				// TODO implementirati
+				complexQueryService.showSceneForTheatre();
 				break;
 			case "2":
 				// TODO implementirati

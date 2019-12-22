@@ -1,0 +1,11 @@
+package rs.ac.uns.ftn.db.jdbc.pozoriste.service;
+
+public class ComplexFunctionalityservice {
+
+		private static final 
+		
+	//Drugi zadatak 
+		public void showReportingForShowingShows() {
+			
+		}
+}

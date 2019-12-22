@@ -1,0 +1,9 @@
+package rs.ac.uns.ftn.db.jdbc.pozoriste.service;
+
+public class ComplexFunctionalityservice {
+
+	public ComplexFunctionalityservice() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
