@@ -36,8 +36,5 @@ public class PredstavaDTO {
 		return String.format("%-6d %-10s %-8f ", idpred, nazivpred, prosecan_broj_gledalaca);
 	}
 	
-	
-	
-	
 
 }

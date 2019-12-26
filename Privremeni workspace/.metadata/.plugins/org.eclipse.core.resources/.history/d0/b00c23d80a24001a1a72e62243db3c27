@@ -1,0 +1,71 @@
+package rs.ac.uns.ftn.db.jdbc.pozoriste.dao;
+
+import java.sql.SQLException;
+
+public class ScenaDAO implements CRUDDao<Scena, Integer> {
+
+	public ScenaDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public int count() throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void delete(T entity) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAll() throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteById(ID id) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean existsById(ID id) throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Iterable<T> findAll() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Iterable<T> findAllById(Iterable<ID> ids) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public T findById(ID id) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(T entity) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void saveAll(Iterable<T> entities) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

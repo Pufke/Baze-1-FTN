@@ -1,0 +1,13 @@
+package rs.ac.uns.ftn.db.jdbc.pozoriste.connection;
+
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
+
+public class ConnectionUtil_HikariCP {
+	private static  HikariConfig hikariConfig = new HikariConfig();
+	private static HikariDataSource hirariDS;
+	
+	static { 
+		 hikariConfig.setJdbcUrl(ConnectionParams.LOCAL_CONNECTION_STRING);
+	}
+}

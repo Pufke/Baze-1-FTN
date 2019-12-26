@@ -1,0 +1,12 @@
+package rs.ac.uns.ftn.db.jdbc.pozoriste.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import rs.ac.uns.ftn.db.jdbc.pozoriste.dto.PredstavaDTO;
+import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Pozoriste;
+
+public interface PredstavaDAO extends CRUDDao<Pozoriste, Integer> {
+
+		public List<PredstavaDTO> najveciProsecanBrGledalaca() throws SQLException{}
+}

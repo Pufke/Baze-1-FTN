@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.zaxxer.hikari.HikariConfig"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.connection.ConnectionParams"/>
+<fullyQualifiedTypeName name="com.zaxxer.hikari.HikariDataSource"/>
+<fullyQualifiedTypeName name="com.sun.corba.se.pept.transport.Connection"/>
+<fullyQualifiedTypeName name="oracle.jdbc.replay.internal.ConnectionInitializationCallback"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.dao.PozoristeDAO"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.model.Prikazivanje"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.dto.PrikazivanjeDTO"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.dao.PrikazivanjeDAO"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.PrikazivanjeDAOImpl"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.model.Pozoriste"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.PozoristeDAOImpl"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.dao.ScenaDAO"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.ScenaDAOImpl"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.model.Scena"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.service.ComplexFunctionalityservice"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.dto.PrikazivanjeScenaDTO"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.connection.ConnectionUtil_HikariCP"/>
+<fullyQualifiedTypeName name="rs.ac.uns.ftn.db.jdbc.pozoriste.model.Predstava"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+</qualifiedTypeNameHistroy>
