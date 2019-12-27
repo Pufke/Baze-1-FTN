@@ -1,5 +1,0 @@
-package rs.ac.uns.ftn.db.jdbc.pozoriste.connection;
-
-public class ConnectionUtil_HikariCP {
-	private static  HikariConfig hikariConfig = new HiariConfig();
-}

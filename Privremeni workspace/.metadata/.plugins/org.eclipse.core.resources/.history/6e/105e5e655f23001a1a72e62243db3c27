@@ -1,5 +1,0 @@
-package rs.ac.uns.ftn.db.jdbc.pozoriste.dao;
-
-public interface PozoristeDAO extends CRUDDao<Pozoriste, Integer> {
-
-}

@@ -1,10 +1,6 @@
 package rs.ac.uns.ftn.db.jdbc.pozoriste.dao;
 
 import java.sql.SQLException;
-import java.util.List;
-
-import rs.ac.uns.ftn.db.jdbc.pozoriste.dto.PredstavaDTO;
-import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Uloga;
 
 public interface CRUDDao<T, ID> {
 
@@ -27,5 +23,4 @@ public interface CRUDDao<T, ID> {
 	void save(T entity) throws SQLException;
 
 	void saveAll(Iterable<T> entities) throws SQLException;
-
 }

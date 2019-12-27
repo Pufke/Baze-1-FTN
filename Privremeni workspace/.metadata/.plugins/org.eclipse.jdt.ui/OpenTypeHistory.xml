@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=JDBC_Pozoriste/src&lt;rs.ac.uns.ftn.db.jdbc.pozoriste.dao{PozoristeDAO.java[PozoristeDAO" modifiers="513" timestamp="1576870321780"/>
-<typeInfo handle="=JDBC_Pozoriste/src&lt;rs.ac.uns.ftn.db.jdbc.pozoriste.dao{CRUDDao.java[CRUDDao" modifiers="513" timestamp="1576853775000"/>
-<typeInfo handle="=JDBC_Pozoriste/src&lt;rs.ac.uns.ftn.db.jdbc.pozoriste.dao{ScenaDAO.java[ScenaDAO" modifiers="513" timestamp="1576944259825"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

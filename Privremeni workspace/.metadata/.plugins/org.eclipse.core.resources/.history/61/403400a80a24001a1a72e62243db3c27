@@ -1,9 +1,0 @@
-package rs.ac.uns.ftn.db.jdbc.pozoriste.dao;
-
-public class ScenaDAO implements CRUDDao<T, ID> {
-
-	public ScenaDAO() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
