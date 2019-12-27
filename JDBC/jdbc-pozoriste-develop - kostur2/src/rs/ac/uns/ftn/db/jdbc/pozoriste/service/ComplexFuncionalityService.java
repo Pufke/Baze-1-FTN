@@ -16,7 +16,10 @@ import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Pozoriste;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Predstava;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Prikazivanje;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Scena;
+<<<<<<< HEAD
 import rs.ac.uns.ftn.jdbc.pozoriste.dto.PredstavaDTO;
+=======
+>>>>>>> 616c5d691c4db64189476a1b699fd2758665a413
 import rs.ac.uns.ftn.jdbc.pozoriste.dto.PrikazivanjeDTO;
 
 public class ComplexFuncionalityService {
@@ -75,6 +78,7 @@ public class ComplexFuncionalityService {
 			System.out.println(prikazivanjeDTO.getBrojPrikazivanja());
 		}
 	}
+<<<<<<< HEAD
 	
 	public void treciKomplexniUpit() throws SQLException {
 		System.out.println(Scena.getFormattedHeader());
@@ -96,5 +100,7 @@ public class ComplexFuncionalityService {
 		
 		
 	}
+=======
+>>>>>>> 616c5d691c4db64189476a1b699fd2758665a413
 
 }

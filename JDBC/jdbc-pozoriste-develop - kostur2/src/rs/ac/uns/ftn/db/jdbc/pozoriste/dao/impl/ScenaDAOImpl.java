@@ -10,7 +10,10 @@ import java.util.List;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.connection.ConnectionHikari_CP;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.ScenaDAO;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Scena;
+<<<<<<< HEAD
 import rs.ac.uns.ftn.jdbc.pozoriste.dto.PredstavaDTO;
+=======
+>>>>>>> 616c5d691c4db64189476a1b699fd2758665a413
 
 public class ScenaDAOImpl implements ScenaDAO {
 
@@ -101,6 +104,7 @@ public class ScenaDAOImpl implements ScenaDAO {
 		}
 	}
 
+<<<<<<< HEAD
 	@Override
 	public List<Scena> pronadjiScenePremaPozoristuJoakimVujicKragujevac() throws SQLException {
 		String upit = "select nazivsce,brojsed,idsce,pozoriste_idpoz from scena where brojsed between (select 0.8*brojsed from scena where idsce=8) and (select 1.2*brojsed from scena where idsce=8)";
@@ -144,4 +148,6 @@ public class ScenaDAOImpl implements ScenaDAO {
 	}
 	
 
+=======
+>>>>>>> 616c5d691c4db64189476a1b699fd2758665a413
 }

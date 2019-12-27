@@ -9,6 +9,11 @@ public class Scena {
 	public Scena() {
 	}
 	
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> 616c5d691c4db64189476a1b699fd2758665a413
 	public Scena(int idsce, String nazivsce, int brojsed, int idpoz) {
 		this.idsce = idsce;
 		this.nazivsce = nazivsce;

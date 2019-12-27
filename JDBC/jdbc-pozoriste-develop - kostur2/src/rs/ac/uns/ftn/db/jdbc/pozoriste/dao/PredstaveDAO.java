@@ -13,5 +13,8 @@ public interface PredstaveDAO extends CRUDDao<Predstava, Integer> {
 		
 		//Meotda koja izbacuje sva Pirkazivanja za prosledjenu prestavu 
 		public List<Prikazivanje> prikazivanjaPredstava(Predstava entity) throws SQLException;
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 616c5d691c4db64189476a1b699fd2758665a413
 }

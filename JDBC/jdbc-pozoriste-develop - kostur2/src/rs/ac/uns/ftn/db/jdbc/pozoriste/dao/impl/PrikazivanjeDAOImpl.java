@@ -4,7 +4,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+<<<<<<< HEAD
 
+=======
+import java.util.ArrayList;
+import java.util.List;
+>>>>>>> 616c5d691c4db64189476a1b699fd2758665a413
 
 import rs.ac.uns.ftn.db.jdbc.pozoriste.connection.ConnectionHikari_CP;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.PrikazivanjeDAO;

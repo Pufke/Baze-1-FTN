@@ -59,7 +59,11 @@ public class ComplexQueryUIHandler {
 				complexFuncionalityService.predstaveKojeSePrikazuju();
 				break;
 			case "3":
+<<<<<<< HEAD
 				complexFuncionalityService.treciKomplexniUpit();
+=======
+				// TODO implementirati
+>>>>>>> 616c5d691c4db64189476a1b699fd2758665a413
 				break;
 			case "4":
 				// TODO implementirati
