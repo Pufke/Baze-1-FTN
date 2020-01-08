@@ -1,12 +1,14 @@
 package rs.ac.uns.ftn.db.jdbc.ui_handler;
 
+import java.sql.SQLException;
+
 import rs.ac.uns.ftn.db.jdbc.pozoriste.service.ComplexFuncionalityService;
 
 public class ComplexQueryUIHandler {
 
 	private static final ComplexFuncionalityService complexQueryService = new ComplexFuncionalityService();
 
-	public void handleComplexQueryMenu() {
+	public void handleComplexQueryMenu() throws SQLException {
 		String answer;
 		do {
 			System.out.println("\nOdaberite funkcionalnost:");
@@ -44,7 +46,8 @@ public class ComplexQueryUIHandler {
 			System.out.println(
 					"\n13 -  Omoguciti interaktivni unos novog pozorista za koji je potrebno uneti sve osnovne podatke, scene i mesto pozorista."
 					+"\nUkoliko mesto ne postoji dodati ga u bazu podataka, a ukoliko postoji samo povezati. Scene kreirati u bazi podataka.");
-			
+			System.out.println(
+					"\n14 -  Uneti MBG maticni broj glumca i procenat uvecanja ili smanjenja plate(npr 20 ako zelite da uvecate paltu, -20 ako zelite da smanjite");
 			
 			System.out.println("\nX - Izlazak iz kompleksnih upita");
 
@@ -89,6 +92,9 @@ public class ComplexQueryUIHandler {
 				break;
 			case "13":
 				// TODO implementirati
+				break;
+			case "14":
+				complexQueryService.povecanjeUmanjenjePlatepremaIDU();
 				break;
 
 			}

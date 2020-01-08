@@ -3,11 +3,13 @@ package rs.ac.uns.ftn.db.jdbc.pozoriste.service;
 import java.sql.SQLException;
 import java.util.HashMap;
 
+import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.GlumacDAO;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.PozoristeDAO;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.PredstavaDAO;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.PrikazivanjeDAO;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.ScenaDAO;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.UlogaDAO;
+import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.GlumacDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.PozoristeDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.PredstavaDAOImpl;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.dao.impl.PrikazivanjeDAOImpl;
@@ -22,6 +24,7 @@ import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Predstava;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Prikazivanje;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Scena;
 import rs.ac.uns.ftn.db.jdbc.pozoriste.model.Uloga;
+import rs.ac.uns.ftn.db.jdbc.ui_handler.MainUIHandler;
 
 public class ComplexFuncionalityService {
 
@@ -30,7 +33,8 @@ public class ComplexFuncionalityService {
 	private static final PrikazivanjeDAO prikazivanjeDAO = new PrikazivanjeDAOImpl();
 	private static final PredstavaDAO predstavaDAO = new PredstavaDAOImpl();
 	private static final UlogaDAO ulogaDAO = new UlogaDAOImpl();
-
+	private static final GlumacDAO glumacDAO = new GlumacDAOImpl();
+	
 	public void showSceneForTheatre() {
 
 		System.out.println(Pozoriste.getFormattedHeader());
@@ -151,6 +155,19 @@ public class ComplexFuncionalityService {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void povecanjeUmanjenjePlatepremaIDU() throws SQLException {
+		System.out.println("MBG: \n");
+		int mbg = Integer.parseInt(MainUIHandler.sc.next());
+		
+		System.out.println("Procenat: \n");
+		double procenat = Double.parseDouble(MainUIHandler.sc.next());
+
+		
+		glumacDAO.uvecanjeUmanjenjePlatePremaIDu(mbg, procenat);
+		
+		System.out.println("Promenili ste platu");
 	}
 
 }

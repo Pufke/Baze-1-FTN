@@ -1,5 +1,6 @@
 package rs.ac.uns.ftn.db.jdbc.ui_handler;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class MainUIHandler {
@@ -10,7 +11,7 @@ public class MainUIHandler {
 	private final ScenaUIHandler scenaUIHandler = new ScenaUIHandler();
 	private final ComplexQueryUIHandler complexQueryUIHandler = new ComplexQueryUIHandler();
 	
-	public void handleMainMenu() {
+	public void handleMainMenu() throws SQLException {
 
 		String answer;
 		do {

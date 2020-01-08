@@ -1,3 +1,4 @@
+//KOMENTAR
 package rs.ac.uns.ftn.db.jdbc.callable_statement;
 
 import java.sql.CallableStatement;

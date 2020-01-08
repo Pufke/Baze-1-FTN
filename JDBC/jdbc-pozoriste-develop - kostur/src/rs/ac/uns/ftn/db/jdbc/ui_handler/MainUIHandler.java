@@ -1,5 +1,7 @@
 package rs.ac.uns.ftn.db.jdbc.ui_handler;
 
+import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class MainUIHandler {
@@ -8,9 +10,10 @@ public class MainUIHandler {
 
 	private final PozoristeUIHandler pozoristeUIHandler = new PozoristeUIHandler();
 	private final ScenaUIHandler scenaUIHandler = new ScenaUIHandler();
+	private final PodelaUIHandler podelaUIHandler = new PodelaUIHandler();
 	private final ComplexQueryUIHandler complexQueryUIHandler = new ComplexQueryUIHandler();
 	
-	public void handleMainMenu() {
+	public void handleMainMenu() throws SQLException, ParseException {
 
 		String answer;
 		do {
@@ -18,6 +21,7 @@ public class MainUIHandler {
 			System.out.println("1 - Rukovanje pozoristima");
 			System.out.println("2 - Rukovanje scenama");
 			System.out.println("3 - Kompleksni upiti");
+			System.out.println("4 - Rukovanje podelama");
 			System.out.println("X - Izlazak iz programa");
 
 			answer = sc.nextLine();
@@ -32,7 +36,7 @@ public class MainUIHandler {
 			case "3":
 				complexQueryUIHandler.handleComplexQueryMenu();
 			case "4":
-
+				podelaUIHandler.handlePodelaMenu();
 			case "5":
 
 			}

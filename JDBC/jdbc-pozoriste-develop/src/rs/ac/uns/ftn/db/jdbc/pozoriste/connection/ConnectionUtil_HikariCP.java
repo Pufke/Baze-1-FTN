@@ -16,7 +16,7 @@ public class ConnectionUtil_HikariCP {
 		hikariConfig.setPassword(ConnectionParams.PASSWORD);
 		hikariConfig.setMaximumPoolSize(5); // default - 10
 		hikariConfig.addDataSourceProperty("cachePrepStmts", "true");
-		hikariConfig.addDataSourceProperty("prepStmtCacheSize", "250");
+		hikariConfig.addDataSourceProperty("kurcina", "250");
 		hikariConfig.addDataSourceProperty("", "");
 		hikariDS = new HikariDataSource(hikariConfig);
 	}

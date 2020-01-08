@@ -1,24 +1,24 @@
 package rs.ac.uns.ftn.db.jdbc.pozoriste.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Podela {
 	private double honorar;
 	private Date datumd;
 	private Date datump;
-	private String imeulo;
-	private int idpred;
+	private int iduloge;
+	private int idpodele;
 	private int mbg;
 
 	public Podela() {
 	}
 
-	public Podela(double honorar, Date datumd, Date datump, String imeulo, int idpred, int mbg) {
+	public Podela(double honorar, Date datumd, Date datump, int iduloge, int idpodele, int mbg) {
 		this.honorar = honorar;
 		this.datumd = datumd;
 		this.datump = datump;
-		this.imeulo = imeulo;
-		this.idpred = idpred;
+		this.iduloge = iduloge;
+		this.idpodele = idpodele;
 		this.mbg = mbg;
 	}
 
@@ -46,20 +46,20 @@ public class Podela {
 		this.datump = datump;
 	}
 
-	public String getImeulo() {
-		return imeulo;
+	public int getIduloge() {
+		return iduloge;
 	}
 
-	public void setImeulo(String imeulo) {
-		this.imeulo = imeulo;
+	public void setImeulo(int iduloge) {
+		this.iduloge = iduloge;
 	}
 
-	public int getIdpred() {
-		return idpred;
+	public int getIdpodele() {
+		return idpodele;
 	}
 
 	public void setIdpred(int idpred) {
-		this.idpred = idpred;
+		this.idpodele = idpred;
 	}
 
 	public int getMbg() {
@@ -79,8 +79,8 @@ public class Podela {
 		long temp;
 		temp = Double.doubleToLongBits(honorar);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + idpred;
-		result = prime * result + ((imeulo == null) ? 0 : imeulo.hashCode());
+		result = prime * result + idpodele;
+		result = prime * result + iduloge;
 		result = prime * result + mbg;
 		return result;
 	}
@@ -106,13 +106,12 @@ public class Podela {
 			return false;
 		if (Double.doubleToLongBits(honorar) != Double.doubleToLongBits(other.honorar))
 			return false;
-		if (idpred != other.idpred)
+		if (idpodele != other.idpodele)
 			return false;
-		if (imeulo == null) {
-			if (other.imeulo != null)
-				return false;
-		} else if (!imeulo.equals(other.imeulo))
-			return false;
+		/*
+		 * if (imeulo == null) { if (other.imeulo != null) return false; } else if
+		 * (!imeulo.equals(other.imeulo)) return false;
+		 */
 		if (mbg != other.mbg)
 			return false;
 		return true;
@@ -120,8 +119,15 @@ public class Podela {
 
 	@Override
 	public String toString() {
-		return "Podela [honorar=" + honorar + ", datumd=" + datumd + ", datump=" + datump + ", imeulo=" + imeulo
-				+ ", idpred=" + idpred + ", mbg=" + mbg + "]";
+		return "Podela [honorar=" + honorar + ", datumd=" + datumd + ", datump=" + datump + ", imeulo=" + iduloge
+				+ ", idpodele=" + idpodele + ", mbg=" + mbg + "]";
 	}
+	
+	public static String getFormattedHeader() {
+		return String.format("%-6s %-30.30s %-30.30s %-30.30s %-30.30s  %-30.30s", "HONORAR", "DATUMD", "DATUMP", "IMEULO", "IDPODELE", "MBG");
+	}
+
+	
+
 
 }
